@@ -1,0 +1,25 @@
+<ul class="nav">
+    <li class="hover">Головна</li>
+    <li class="nav__services" (mouseenter)="isMenuOpen = true" (mouseleave)="isMenuOpen = false">
+        <p class="hover">
+            Наші послуги
+            <img src="../../../../assets/icon/all_menu.png" alt="all_menu" [ngClass]="{'active-img': isMenuOpen}">
+        </p>
+
+        <div id="services" [ngClass]="{'active-list': isMenuOpen}">
+            <ul>
+                <li class="hover">Реєстрація компанії</li>
+                <li class="hover">Облік</li>
+                <li class="hover">Аудит</li>
+                <li class="hover">Відкриття банківського рахунку</li>
+                <li class="hover">Корпоративне адміністрування</li>
+                <li class="hover">Фідуціарні послуги</li>
+                <li class="hover">Податкове консультування</li>
+            </ul>
+        </div>
+    </li>
+    <li class="hover">Про компанію</li>
+    <li class="hover">Контакти</li>
+</ul>
+
+<div class="close" (click)="close()">X</div>
