@@ -1,0 +1,40 @@
+:host{
+    background-color: #1c1c1c;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    padding: 30px 170px;
+    width: 100%;
+    color: #525252;
+    font-size: 27px;
+}
+
+img{
+    max-width: 240px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul{
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 30px;
+    color:#8F8F8F;
+
+    li{
+        padding: 0 25px 25px 25px;
+        border-bottom: 2px solid #8F8F8F;
+        cursor: pointer;
+
+        &:active,
+        &:hover{
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+    }
+}
