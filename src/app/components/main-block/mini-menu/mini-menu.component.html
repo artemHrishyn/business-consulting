@@ -1,8 +1,14 @@
 <ul class="nav">
-    <li class="hover">Головна</li>
+    <li class="hover">
+        <a [routerLink]="'main'" routerLinkActive="active">
+            Головна
+        </a>
+    </li>
     <li class="nav__services" (mouseenter)="isMenuOpen = true" (mouseleave)="isMenuOpen = false">
         <p class="hover">
-            Наші послуги
+            <a [routerLink]="'services'" routerLinkActive="active">
+                Наші послуги
+            </a>
             <img src="../../../../assets/icon/all_menu.png" alt="all_menu" [ngClass]="{'active-img': isMenuOpen}">
         </p>
 

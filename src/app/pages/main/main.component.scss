@@ -1,0 +1,142 @@
+:host{
+}
+
+.up{
+    height: 911px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &__head{
+        display: flex;
+        flex-direction: column;
+        padding: 200px;
+        color: #fff;
+
+        &__title{
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 30px;
+
+            &__info{
+                font-size: 35px;
+                margin-left: 15px;
+                letter-spacing: 4px;
+            }
+        }
+
+        &__but{
+            padding: 7px 16px;
+            width: 268px;
+            height: 48px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 26px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    h1{
+        font-size: 120px;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: normal;
+        line-height: 0.8;
+        letter-spacing: 10px;
+    }
+}
+
+ul{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(131 130 130 / .51);
+    list-style: none;
+    padding: 28px 0;
+
+    li{
+        display: flex;
+        margin-left: 15px;
+        
+        span{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            max-width: 47px;
+            width: 100%;
+            height: auto;
+            background-color: #1c1c1c;
+
+            img{
+                opacity: 1;
+                max-width: 26px;
+                height: auto;
+            }
+        }
+        p{
+            font-size: 48;
+        }
+    }
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 36px;
+    padding: 80px 200px;
+
+    h2{
+        font-family: 'Coolvetica C', sans-serif;
+        color: #000;
+        margin: -10px 0 30px;
+        font-size: 54px;
+        letter-spacing: 2px;
+    }
+
+    p{
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 2;
+    }
+}
+
+.service{
+    margin-bottom: 25px;
+    padding: 70px auto 35px;
+    color: #fff;
+
+    h2{
+        margin: 0 0 55px;
+        font-size: 54px;
+        line-height: 1;
+        letter-spacing: 3px;
+    }
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        
+        &__title{
+            max-width: 430px;
+            background-color: #fff;
+            width: 100%;
+            
+            padding: 24px;
+            align-items: center;
+            font-size: 21px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        p{
+            font-size: 15px;
+            line-height: 1.6;
+            padding-left: 64px;
+            font-family: 'Roboto', sans-serif;   
+        }
+    }
+}
