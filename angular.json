@@ -94,6 +94,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "business-consulting:build:production",
+              "serveTarget": "business-consulting:serve:production"
+            },
+            "development": {
+              "buildTarget": "business-consulting:build:development",
+              "serveTarget": "business-consulting:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

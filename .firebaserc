@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "business-consulting-4286f": {
+      "hosting": {
+        "business-consulting": [
+          "business-consulting-4286f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "business-consulting-4286f"
+  }
+}

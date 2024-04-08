@@ -15,4 +15,5 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ]
 })
-export class MainBlockModule { }
+export class MainBlockModule {
+}
