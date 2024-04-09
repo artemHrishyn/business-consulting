@@ -1,0 +1,236 @@
+$colorWhite: #fff;
+$colorBlack: #000;
+
+.contacts{
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 47px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    &__title{
+        background: rgba(255, 255, 255, 0.15);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        letter-spacing: 2px;
+        padding: 18px 0;
+    }
+
+    h3{
+        font-family: 'Coolvetica C', sans-serif;
+        line-height: 1.2;
+        color: $colorWhite;
+    }
+
+    &__block{
+        background: rgba(0, 0, 0, 0.25);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        padding: 12px 0;
+
+        &__text{
+            display: flex;
+            align-items: center;
+        }
+
+        p{
+            color: #8F8F8F;
+            font-size: 19px;
+
+            &:nth-child(1)
+            {
+                cursor: pointer;
+                
+                &:hover{
+                    color: $colorWhite;
+                }
+            }
+        }
+
+        span{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #8F8F8F;
+            margin: 0 15px;
+            position: relative;
+
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background: #8F8F8F;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -1px;
+                margin-top: -1px;
+            }
+        }
+    }
+}
+
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    max-width: 1470px;
+    width: 100%;
+}
+
+.response{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+    h1{
+        margin-bottom: 50px;
+        font-size: 41px;
+        letter-spacing: 3px;
+        line-height: 2;
+    }
+
+    &__info{
+        position: absolute;
+        top: 170px;
+        left: 183px;
+        background-color: #1c1c1c;
+        color: $colorWhite;
+        padding: 40px 47px;
+        max-width: 531px;
+        width: 100%;
+        height: 240px;
+
+        h3{
+            font-size: 40px;
+            letter-spacing: 2px;
+            line-height: 1;
+            margin: 0 0 17px;
+        }
+
+        p{
+            padding-left: 48px;
+            font-size: 16px;
+            color: #D9D9D9;
+        }
+    }
+
+    &__form{
+        background-color: #f5f5f5;
+        display: flex;
+
+        form{
+            margin: 100px auto;
+            padding: 40px 48px;
+            background-color: $colorWhite;
+            max-width: 1345px;
+            width: 100%;
+            z-index: 1;
+
+            .row1{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+                
+                input{
+                    display: block;
+                    max-width: 330px;
+                    width: 100%;
+                    height: 63px;
+                    padding: 18px 23px;
+                    font-size: 22px;
+                    line-height: 1.42857143;
+                    color: $colorBlack;
+                    background-color: $colorWhite;
+                    border: 2px solid $colorBlack;
+                    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+                    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+
+            textarea{
+                padding: 18px 23px;
+                margin-bottom: 40px;
+                display: block;
+                border: 2px solid $colorBlack;
+                background-color: $colorWhite;
+                color: $colorBlack;
+                width: 100%;
+                max-height: 150px;
+                font-family: 'Roboto', sans-serif;    
+                font-size: 22px;
+                line-height: 1.42857143;
+            }
+
+            .row2{
+                display: flex;
+                justify-content: space-between;
+
+                input{
+                    margin-right: 15px;
+                    display: inline-block;
+                    padding: 7px 16px;
+                    background-color: #1c1c1c;
+                    border: 1px solid #1c1c1c;
+                    max-width: 230px;
+                    width: 100%;
+                    height: 63px;
+                    font-family: 'Coolvetica C', sans-serif;
+                    font-size: 26px;
+                    color: $colorWhite;
+                    cursor: pointer;
+                }
+
+                &__policy{
+                    display: flex;
+                    justify-content: space-between;
+
+                    input{
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    p{
+                        color: #A3A3A3;
+                        font-size: 18px;
+                        order: 2;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                        letter-spacing: normal;
+
+                        a{
+                            color: $colorBlack;
+                            
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

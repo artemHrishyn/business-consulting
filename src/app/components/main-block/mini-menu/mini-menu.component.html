@@ -24,8 +24,13 @@
             </ul>
         </div>
     </li>
-    <li class="hover">Про компанію</li>
-    <li class="hover">Контакти</li>
+    <li class="hover">
+        Про компанію
+    </li>
+    <li class="hover">
+        <a [routerLink]="'contacts'" routerLinkActive="active">
+        Контакти
+    </a>
+    </li>
 </ul>
-
 <div class="close" (click)="close()">X</div>
