@@ -1,3 +1,4 @@
+<!-- HEAD -->
 <div class="up" style="background-image: url(../../../assets/mountains.jpg);">
 
     <div class="up__head">
@@ -14,7 +15,7 @@
         </p>
     </div>
 
-    <ul>
+    <ul class="up__list">
         <li>
             <span>
                 <img src="../../../assets/icon/registration.svg" alt="registration">
@@ -73,7 +74,9 @@
         </li>
     </ul>
 </div>
+<!-- END HEAD -->
 
+<!-- INFO -->
 <div class="info">
     <img src="../../../assets/company_1.jpg" alt="company"/>
     <div class="info__text">
@@ -93,43 +96,106 @@
     <img src="../../../assets/company_2.jpg" alt="company"/>
 </div>
 
-<div class="service" style="background-image: url(../../../assets/sunset.jpg);">
-    <h2>Наші послуги</h2>
-    <div class="service__info">
-        <div class="service__info__title">
+<!-- END INFO -->
 
+<!-- SERVICE -->
+<div class="service" style="background-image: url(../../../assets/sunset.jpg);">
+    <div class="container" >
+        <h2>Наші послуги</h2>
+        <div class="service__info">
+            <div class="service__info__title">
+                <div>
+                    <img [src]="'../../../assets/icon/' + image + '.svg'" [alt]="image" />
+                </div>
+                <p>{{ title }}</p>
+            </div>
+            <p class="service__info__text">
+                {{ text}}
+            </p>
         </div>
+        <ul class="service__list">
+            <li *ngFor="let item of dataServ" (click)="clickService(item)">
+                <div>
+                    <img [src]="'../../../assets/icon/' + item.image + '.svg'" [alt]="image" />
+                </div>
+                <p>{{ item.title }}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- END SERVICE -->
+
+<!-- FORM -->
+<div class="response">
+    <h1>давайте працювати разом</h1>
+
+    <div class="response__info">
+        <h3>Залиште свій запит</h3>
+        <p>Наші фахівці зв'яжуться з вами найближчим часом</p>
+    </div>
+
+    <div class="response__form">
+        <form action="">
+            <div class="row1">
+                <input type="text" placeholder="Ваше ім'я">
+                <input type="text" placeholder="Номер телефону">
+                <input type="email" placeholder="Email">
+            </div>
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Текст запиту"></textarea>
+            <div class="row2">
+                <input type="button" value="" value="Надіслати">
+                <div class="row2__policy">
+                    <input type="checkbox" name="" id="">
+                    <p>Натискаючи кнопку, ви даєте згоду на обробку ваших персональних даних та погоджуєтеся з <a href=""> політикою конфіденційності</a>.</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END FORM -->
+
+<!-- ANNOUNCEMENT -->
+
+<div class="announcement">
+    <div class="announcement__anima">
         <p>
-            Наші послуги з фінансового аудиту ретельно розроблені, щоб гарантувати, що ваша організація відповідає
-            найвищим стандартам фінансової точності та нормативно-правової відповідності. Наша команда аудиторів
-            застосовує ретельний підхід, заснований на оцінці ризиків, для перевірки вашої фінансової звітності,
-            виявлення можливостей для вдосконалення та забезпечення належної фінансової практики.
+            давайте обговоримо сьогодні!
         </p>
     </div>
-    <ul>
-        <li>
-            <img src="" alt=""/>
-            <p></p>
-        </li>
-        <li>
-            <img src="" alt=""/>
-            <p></p>
-        </li>
-        <li>
-            <img src="" alt=""/>
-            <p></p>
-        </li>
-        <li>
-            <img src="" alt=""/>
-            <p></p>
-        </li>
-        <li>
-            <img src="" alt=""/>
-            <p></p>
-        </li>
-        <li>
-            <img src="" alt=""/>
-            <p></p>
-        </li>
-    </ul>
 </div>
+<!-- END ANNOUNCEMENT -->
+
+<!-- MAP -->
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169.5244956070099!2d8.51565272153955!3d47.16976248872135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a030444a48f%3A0x84d42ace2b057e6d!2sKENSINGTON%20Finest%20Properties%20International%20AG!5e0!3m2!1sru!2sua!4v1712588617806!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map__info">
+        <h2>Контакти</h2>
+        <ul>
+            <li>
+                <div>
+                    <img src="../../../assets/icon/phone.svg" alt="phone"/>
+                </div>
+                <a href="tel:+41799483333">
+                    +41 79 948 33 33
+                </a>
+            </li>
+            <li>
+                <div>
+                    <img src="../../../assets/icon/location.svg" alt="location"/>
+                </div>
+                <p>
+                    Bahnhofstrasse 21, 6300 Zug, Switzerland
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="../../../assets/icon/email.svg" alt="e-mail"/>
+                </div>
+                <a href="mailto:info@alpinegate.ch">
+                    info&#64;alpinegate.ch
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- END MAP -->
