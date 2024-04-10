@@ -25,12 +25,14 @@
         </div>
     </li>
     <li class="hover">
-        Про компанію
+        <a [routerLink]="'about-company'" routerLinkActive="active">
+            Про компанію
+        </a>
     </li>
     <li class="hover">
         <a [routerLink]="'contacts'" routerLinkActive="active">
-        Контакти
-    </a>
+            Контакти
+        </a>
     </li>
 </ul>
 <div class="close" (click)="close()">X</div>

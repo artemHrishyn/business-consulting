@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { GoUrlService } from '../../services/go to url/go-url.service';
 import { HeadCategoryComponent } from '../../components/head-category/head-category.component';
 
 @Component({
-  selector: 'bcs-contacts',
+  selector: 'bcs-about-company',
   standalone: true,
   imports: [
     HeadCategoryComponent
   ],
-  templateUrl: './contacts.component.html',
-  styleUrl: './contacts.component.scss'
+  templateUrl: './about-company.component.html',
+  styleUrl: './about-company.component.scss'
 })
-export class ContactsComponent {
+export class AboutCompanyComponent {
+
 }
