@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MiniMenuComponent } from '../mini-menu/mini-menu.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,10 +10,14 @@ import { CommonModule } from '@angular/common';
     MiniMenuComponent
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: [
+    './header.component.scss',
+    './media.scss'
+  ]
 })
 export class HeaderComponent {
   public miniMenu: boolean = false;
+  public isListVisible: boolean = true
   
   public menuActivate(){
     this.miniMenu = true;
@@ -21,5 +25,10 @@ export class HeaderComponent {
   
   close() {
     this.miniMenu = false;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isListVisible = window.innerWidth >= 1200;
   }
 }

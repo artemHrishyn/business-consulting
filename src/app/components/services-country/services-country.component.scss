@@ -1,0 +1,28 @@
+.services {
+    width: 100%;
+    height: auto;
+    background-color: #efefef;
+    
+    &__img {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            transition: transform 0.3s;
+            
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__block {
+        max-width: clamp(16px, 1vw, 600px);
+        width: 100%;
+        height: auto;
+
+        &__but {
+            width: 100%;
+        }
+    }
+}

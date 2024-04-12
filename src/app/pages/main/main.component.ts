@@ -10,7 +10,10 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  styleUrls: [
+    './main.component.scss',
+    './media.scss'
+  ]
 })
 
 export class MainComponent implements OnInit {

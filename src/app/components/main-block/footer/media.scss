@@ -1,0 +1,24 @@
+@media screen and (max-width: 2048px) {
+    .menu{
+        padding: 0 10px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 2048px) {
+    :host{
+        padding: 50px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        li{
+            margin-bottom: 10px;
+        }
+    }
+}
