@@ -1,11 +1,110 @@
 @media only screen and (max-width: 1440px) {
+    .up__head {
+        margin: 150px auto 50px;
+    }
     .info{
         padding: 80px;
+    }
+
+    .map{
+        height: auto;
+        
+        &__info{
+            padding: 40px;
+            position: relative;
+            top: 0;
+            right: 0;
+
+            h2{
+                margin-bottom: 30px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 1024px) {
+    .up__list {
+        padding: 10px 0;
+    }
     .info{
         padding: 20px;
+
+        &__text{
+            grid-row: 1;
+        }
+    }
+
+    .service__info{
+        flex-direction: column;
+
+        &__title{
+            margin-bottom: 20px;
+        }
+
+        &__text{
+            margin-left: 10px;
+        }
+    }
+    
+    .row1{
+        flex-direction: column;
+    }
+
+    .response{
+        margin-top: 20px;
+        
+        h1{
+            grid-row: 1;
+            font-size: 30px;
+        }
+    }
+
+    .announcement{
+        padding: 15px 0;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    .response__info{
+        padding: 10px;
+        margin-bottom: 20px;
+        color: #fff;
+        max-width: 531px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .up__head{
+        margin: 65px auto;
+        
+        &__title {
+            margin: 0;
+        }
+
+        &__but {
+            padding: 7px;
+            width: 187px;
+            height: 35px;
+            font-size: 20px;
+        }
+    }
+    .service__list li{
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .row2{
+        flex-direction: column;
+    }
+
+    .map__info ul li{
+        flex-direction: column;
+
+        div{
+            margin: 10px 0;
+        }
     }
 }
