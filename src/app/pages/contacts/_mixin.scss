@@ -1,0 +1,12 @@
+@mixin gridTemplateResponse(){
+
+    @media only screen and (max-width: 4000px) {
+        grid-template-columns: 1fr;
+        // grid-template-rows: 175px 1fr;
+    }
+    
+    // @media only screen and (max-width: 1024px) {
+    //     grid-template-columns: 1fr;
+    //     grid-template-rows: 1fr;
+    // }
+}

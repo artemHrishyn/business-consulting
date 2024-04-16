@@ -1,11 +1,11 @@
 <div class="services">
     <div class="services__img">
-        <img src="../../../assets/company/company3.jpg" alt="country">
+        <img [src]="'../../../assets/service/service' + img + '.jpg'" alt="service">
     </div>
 
     <div class="services__block">
         <p class="services__block__link">
-            Податкове консультування
+            {{ text }}
         </p>
         <p class="services__block__but">
             <bcs-but-submit></bcs-but-submit>

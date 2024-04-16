@@ -38,6 +38,7 @@ $colorBlack: #000;
         font-family: 'Coolvetica C', sans-serif;
         line-height: 1.2;
         color: $colorWhite;
+        font-size: clamp(20px, 1vw, 40px);
     }
 
     &__block{
@@ -53,7 +54,7 @@ $colorBlack: #000;
 
         p{
             color: #8F8F8F;
-            font-size: 19px;
+            font-size: clamp(18px, 1vw, 35px);
 
             &:nth-child(1)
             {

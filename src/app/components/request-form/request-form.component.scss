@@ -1,0 +1,97 @@
+$colorWhite: #fff;
+$colorBlack: #000;
+$font-family-Roboto: 'Roboto', sans-serif;
+
+:host{
+    grid-column: 1 / -1;
+    z-index: 1;
+    padding: 10px;
+}
+
+form{
+    background-color: $colorWhite;
+    max-width: 1345px;
+    width: 100%;
+    
+    .row1{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        
+        input{
+            margin: 10px;
+            padding: 18px 23px;
+            display: block;
+            max-width: 330px;
+            width: 100%;
+            height: 63px;
+            font-size: clamp(15px, 2vw, 22px);
+            line-height: 1.42857143;
+            color: $colorBlack;
+            background-color: $colorWhite;
+            border: 2px solid $colorBlack;
+            font-family: $font-family-Roboto;
+        }
+    }
+    
+    textarea{
+        padding: 18px 23px;
+        margin-bottom: 40px;
+        display: block;
+        border: 2px solid $colorBlack;
+        background-color: $colorWhite;
+        color: $colorBlack;
+        width: 100%;
+        max-height: 150px;
+        font-family: $font-family-Roboto;    
+        font-size: 22px;
+        line-height: 1.42857143;
+    }
+    
+    .row2{
+        display: flex;
+        justify-content: space-between;
+    
+        input{
+            margin-right: 15px;
+            display: inline-block;
+            padding: 7px 16px;
+            background-color: #1c1c1c;
+            border: 1px solid #1c1c1c;
+            max-width: 230px;
+            width: 100%;
+            height: 63px;
+            font-family: $font-family-Roboto;
+            font-size: 26px;
+            color: $colorWhite;
+            cursor: pointer;
+        }
+    
+        &__policy{
+            display: flex;
+            justify-content: space-between;
+    
+            input{
+                width: 15px;
+                height: 15px;
+            }
+    
+            p{
+                color: #A3A3A3;
+                font-size: 18px;
+                order: 2;
+                font-family: $font-family-Roboto;
+                font-weight: 300;
+                letter-spacing: normal;
+    
+                a{
+                    color: $colorBlack;
+                    
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -2,6 +2,12 @@ $text: #1c1c1c;
 $font-family-Coolvetica: "Coolvetica C", sans-serif;
 $font-family-Roboto: 'Roboto', sans-serif;
 
+:host{
+    max-width: 100vw;
+    width: 100%;
+    padding: 5px;
+}
+
 .about-company{
     background-color: #f5f5f5;
     padding-top: 1px;
@@ -20,7 +26,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
             top: -105px;
             font-family: $font-family-Coolvetica;
             color: $text;
-            font-size: 31px;
+            font-size: clamp(30px, 1vw, 40px);
             line-height: 1.4;
             margin-top: 40px;
         }
@@ -29,7 +35,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
             color: #000;
             font-family: $font-family-Roboto;
             line-height: 1.6;
-            font-size: 15px;
+            font-size: clamp(15px, 1vw, 30px);
         }
     }
 
@@ -37,12 +43,17 @@ $font-family-Roboto: 'Roboto', sans-serif;
         display: flex;
         flex-direction: column;
 
-        ul{
+        &__list{
+            overflow: hidden;
+            position: relative;
+            top: -150px;
+        }
+            
+            ul{
             display: flex;
             align-items: center;
             list-style: none;
-            position: relative;
-            top: -150px;
+            animation: marquee 20s linear infinite;
 
             li{
                 margin-right: 50px;
@@ -61,7 +72,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
                 color: #000;
                 font-family: $font-family-Roboto;
                 line-height: 1.6;
-                font-size: 15px;
+                font-size: clamp(15px, 1vw, 30px);
                 letter-spacing: normal;
 
                 &:nth-child(1){
@@ -86,7 +97,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
         }
 
         h3{
-            font-size: 40px;
+            font-size: clamp(20px ,2vw , 60px);
             font-family: $font-family-Coolvetica;
             letter-spacing: 2px;
             color: $text;
@@ -97,7 +108,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
 
         &__director{
             margin-right: 290px;
-            max-width: 335px;
+            max-width: clamp(240px, 20vw, 480px);
             width: 100%;
             position: relative;
             top: -90px;
@@ -109,7 +120,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
             h4{
                 color: $text;
                 font-family: $font-family-Coolvetica;
-                font-size: 32px;
+                font-size: clamp(30px , 1vw, 50px);
                 line-height: 1.2;
                 margin-bottom: 5px;
                 letter-spacing: 2px;
@@ -119,7 +130,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
                 margin-bottom: 15px;
                 font-family: $font-family-Roboto;
                 line-height: 1.6;
-                font-size: 15px;
+                font-size: clamp(15px , 1vw, 30px);
                 color: #000;
             }
 
@@ -127,9 +138,9 @@ $font-family-Roboto: 'Roboto', sans-serif;
                 background-color: $text;
                 color: #fff;
                 font-family: $font-family-Coolvetica;
-                max-width: 275px;
+                text-align: center;
                 width: 100%;
-                font-size: 25px;
+                font-size: clamp(20px , 1vw, 40px);
                 letter-spacing: 2px;
                 padding: 11px;
                 cursor: pointer;
@@ -149,6 +160,16 @@ $font-family-Roboto: 'Roboto', sans-serif;
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
-    max-width: 1470px;
+    max-width: 2500px;
     width: 100%;
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }

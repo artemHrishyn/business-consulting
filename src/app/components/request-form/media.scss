@@ -1,0 +1,17 @@
+@media screen and (max-width: 1024px) {
+    form .row1{
+        flex-direction: column;
+
+        input{
+            padding: 15px;
+            max-width: 50vw;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .row2{
+        flex-direction: column;
+    }
+}

@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { DataCollectionService } from '../../services/firebase/data-collection.service';
 import { DataServ } from '../../interfaces/dataServece.interfaces';
 import { CommonModule } from '@angular/common';
+import { RequestFormComponent } from '../../components/request-form/request-form.component';
 
 @Component({
   selector: 'bcs-main',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    RequestFormComponent
   ],
   templateUrl: './main.component.html',
   styleUrls: [

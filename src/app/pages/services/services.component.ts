@@ -10,7 +10,10 @@ import { ServicesCountryComponent } from '../../components/services-country/serv
     ServicesCountryComponent
   ],
   templateUrl: './services.component.html',
-  styleUrl: './services.component.scss'
+  styleUrls: [
+    './services.component.scss',
+    './media.scss'
+  ]
 })
 export class ServicesComponent {
 

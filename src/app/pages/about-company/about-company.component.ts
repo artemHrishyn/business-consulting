@@ -9,7 +9,10 @@ import { GoUrlService } from '../../services/go to url/go-url.service';
     HeadCategoryComponent
   ],
   templateUrl: './about-company.component.html',
-  styleUrl: './about-company.component.scss'
+  styleUrls: [
+    './about-company.component.scss',
+    './media.scss'
+  ]
 })
 export class AboutCompanyComponent {
   constructor(
