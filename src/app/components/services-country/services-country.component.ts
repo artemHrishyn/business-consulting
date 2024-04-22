@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ButSubmitComponent } from '../but-submit/but-submit.component';
 
 @Component({
@@ -10,14 +10,7 @@ import { ButSubmitComponent } from '../but-submit/but-submit.component';
   templateUrl: './services-country.component.html',
   styleUrl: './services-country.component.scss'
 })
-export class ServicesCountryComponent implements OnInit {
+export class ServicesCountryComponent {
   @Input() img: string = '';
   @Input() text: string = '';
-  @Input() link: string = '';
-  
-  ngOnInit(): void {
-    console.log(
-      this.img + " | " + this.text + " | " + this.link
-    );
-  }
 }

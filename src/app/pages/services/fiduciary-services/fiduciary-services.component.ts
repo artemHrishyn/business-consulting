@@ -3,16 +3,16 @@ import { BusinessPotentialComponent } from '../../../components/business-potenti
 import { SetValueService } from '../../../services/setValue/set-value.service';
 
 @Component({
-  selector: 'bcs-audit',
+  selector: 'bcs-fiduciary-services',
   standalone: true,
   imports: [
     BusinessPotentialComponent
   ],
-  templateUrl: './audit.component.html',
-  styleUrl: './audit.component.scss'
+  templateUrl: './fiduciary-services.component.html',
+  styleUrl: './fiduciary-services.component.scss'
 })
-export class AuditComponent implements OnInit {
-  private value: string = 'Аудит';
+export class FiduciaryServicesComponent implements OnInit {
+  private value: string = 'Фідуціарні послуги';
 
   constructor(
     public setValue: SetValueService){

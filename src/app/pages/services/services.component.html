@@ -1,12 +1,47 @@
-<bcs-head-category></bcs-head-category>
+<bcs-head-category [category]="'Наші послуги'" ></bcs-head-category>
 
-<ul>
-    <li><bcs-services-country img="__registr" text="Реєстрація компанії" link="registration"></bcs-services-country></li>
-    <li><bcs-services-country img="__accounting" text="Облік" link="accounting"></bcs-services-country></li>
-    <li><bcs-services-country img="__audit" text="Аудит" link="audit."></bcs-services-country></li>
-    <li><bcs-services-country img="__admin" text="Корпоративне адміністрування" link="admin"></bcs-services-country></li>
-    <li><bcs-services-country img="__tax" text="Податкове консультування" link="tax"></bcs-services-country></li>
-    <li><bcs-services-country img="__registr2" text="Trademark Registration" link="registr2"></bcs-services-country></li>
-    <li><bcs-services-country img="" text="Фідуціарні послуги" link="hg"></bcs-services-country></li>
-    <li><bcs-services-country img="__score" text="Відкриття банківського рахунку" link="score"></bcs-services-country></li>
+<ul *ngIf="!childComponentActive">
+    <li>
+        <a [routerLink]="'registration'" routerLinkActive="active">
+            <bcs-services-country img="__registr" text="Реєстрація компанії"></bcs-services-country>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="'accounting'" routerLinkActive="active">
+            <bcs-services-country img="__accounting" text="Облік"></bcs-services-country>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="'audit'" routerLinkActive="active">
+            <bcs-services-country img="__audit" text="Аудіт"></bcs-services-country>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="'corporate-admin'" routerLinkActive="active">
+            <bcs-services-country img="__admin" text="Корпоративне адміністрування"></bcs-services-country>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="'tax'" routerLinkActive="active">
+            <bcs-services-country img="__tax" text="Податкове консультування"></bcs-services-country>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="'trademark-registration'" routerLinkActive="active">
+            <bcs-services-country img="__registr2" text="Trademark Registration"></bcs-services-country>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="'fiduciary-services'" routerLinkActive="active">
+            <bcs-services-country img="" text="Фідуціарні послуги"></bcs-services-country>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="'bank-account'" routerLinkActive="active">
+            <bcs-services-country img="__bank-account" text="Відкриття банківського рахунку"></bcs-services-country>
+        </a>
+    </li>
 </ul>
+
+
+<router-outlet (activate)="onChildActivate()" (deactivate)="onChildDeactivate()"></router-outlet>

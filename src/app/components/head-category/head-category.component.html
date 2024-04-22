@@ -6,9 +6,14 @@
     </div>
     <div class="contacts__block">
         <div class="container contacts__block__text">
-            <p (click)="goToUrl('')"> Головна</p>
+            <p (click)="goToUrl('main')"> Головна</p>
             <span></span>
-            <p>Контакти</p>
+            <p (click)="goToUrl('')">{{ category }}</p>
+            
+            <div class="contacts__block__text__children" *ngIf="isChildren">
+                <span></span>
+                <p>{{ children }}</p>
+            </div>
         </div>
     </div>
 </div>

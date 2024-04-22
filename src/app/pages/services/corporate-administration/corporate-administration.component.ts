@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { HeadCategoryComponent } from '../../../components/head-category/head-category.component';
 import { BusinessPotentialComponent } from '../../../components/business-potential/business-potential.component';
 import { SetValueService } from '../../../services/setValue/set-value.service';
 
 @Component({
-  selector: 'bcs-audit',
+  selector: 'bcs-corporate-administration',
   standalone: true,
   imports: [
     BusinessPotentialComponent
   ],
-  templateUrl: './audit.component.html',
-  styleUrl: './audit.component.scss'
+  templateUrl: './corporate-administration.component.html',
+  styleUrl: './corporate-administration.component.scss'
 })
-export class AuditComponent implements OnInit {
-  private value: string = 'Аудит';
+export class CorporateAdministrationComponent implements OnInit {
+  private value: string = 'Корпоративне адміністрування';
 
   constructor(
     public setValue: SetValueService){

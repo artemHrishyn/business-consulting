@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { HeadCategoryComponent } from '../../../components/head-category/head-category.component';
 import { BusinessPotentialComponent } from '../../../components/business-potential/business-potential.component';
 import { SetValueService } from '../../../services/setValue/set-value.service';
 
 @Component({
-  selector: 'bcs-audit',
+  selector: 'bcs-tax',
   standalone: true,
   imports: [
     BusinessPotentialComponent
   ],
-  templateUrl: './audit.component.html',
-  styleUrl: './audit.component.scss'
+  templateUrl: './tax.component.html',
+  styleUrl: './tax.component.scss'
 })
-export class AuditComponent implements OnInit {
-  private value: string = 'Аудит';
+export class TaxComponent implements OnInit {
+  private value: string = 'Податкове консультування';
 
   constructor(
     public setValue: SetValueService){

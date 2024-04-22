@@ -6,7 +6,7 @@
     </li>
     <li class="nav__services" (mouseenter)="isMenuOpen = true" (mouseleave)="isMenuOpen = false">
         <p class="hover">
-            <a [routerLink]="'services'" routerLinkActive="active">
+            <a [routerLink]="'services'" routerLinkActive="active" (click)="goToService('')">
                 Наші послуги
             </a>
             <img src="../../../../assets/icon/all_menu.png" alt="all_menu" [ngClass]="{'active-img': isMenuOpen}">
@@ -14,13 +14,41 @@
 
         <div id="services" [ngClass]="{'active-list': isMenuOpen}">
             <ul>
-                <li class="hover">Реєстрація компанії</li>
-                <li class="hover">Облік</li>
-                <li class="hover">Аудит</li>
-                <li class="hover">Відкриття банківського рахунку</li>
-                <li class="hover">Корпоративне адміністрування</li>
-                <li class="hover">Фідуціарні послуги</li>
-                <li class="hover">Податкове консультування</li>
+                <li class="hover">
+                    <a [routerLink]="'services/registration'" routerLinkActive="active" (click)="goToService('')">
+                      Реєстрація компанії
+                    </a>
+                </li>
+                <li class="hover">
+                    <a [routerLink]="'services/accounting'" routerLinkActive="active" (click)="goToService('')">
+                        Облік
+                    </a>
+                </li>
+                <li class="hover">
+                    <a [routerLink]="'services/audit'" routerLinkActive="active" (click)="goToService('')">
+                        Аудит
+                    </a>
+                </li>
+                <li class="hover">
+                    <a [routerLink]="'services/bank-account'" routerLinkActive="active" (click)="goToService('')">
+                        Відкриття банківського рахунку
+                    </a>
+                </li>
+                <li class="hover">
+                    <a [routerLink]="'services/corporate-admin'" routerLinkActive="active" (click)="goToService('')">
+                        Корпоративне адміністрування
+                    </a>
+                </li>
+                <li class="hover">
+                    <a [routerLink]="'services/fiduciary-services'" routerLinkActive="active" (click)="goToService('')">
+                        Фідуціарні послуги
+                    </a>
+                </li>
+                <li class="hover">
+                    <a [routerLink]="'services/tax'" routerLinkActive="active" (click)="goToService('')">
+                        Податкове консультування
+                    </a>
+                </li>
             </ul>
         </div>
     </li>

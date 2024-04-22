@@ -1,17 +1,24 @@
-import { Component } from '@angular/core';
-import { ButSubmitComponent } from '../../../components/but-submit/but-submit.component';
-import { HeadCategoryComponent } from '../../../components/head-category/head-category.component';
+import { Component, OnInit } from '@angular/core';
+import { BusinessPotentialComponent } from '../../../components/business-potential/business-potential.component';
+import { SetValueService } from '../../../services/setValue/set-value.service';
 
 @Component({
   selector: 'bcs-registration',
   standalone: true,
   imports: [
-    HeadCategoryComponent,
-    ButSubmitComponent
+    BusinessPotentialComponent
   ],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.scss'
 })
-export class RegistrationComponent {
+export class RegistrationComponent implements OnInit {
+  private value: string = 'Реєстрація компанії';
 
+  constructor(
+    public setValue: SetValueService){
+  }
+  
+  ngOnInit(): void {
+    this.setValue.setValue(this.value);
+  }
 }

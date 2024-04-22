@@ -1,0 +1,56 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(12px, 1vw, 35px);
+}
+
+.conteiner{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.text{
+    padding: 55px 0;
+}
+
+.block{
+    background-color: #F5F5F5;
+    padding: 55px 0;
+    
+    h1{
+        margin-bottom: 30px;
+        font-size: clamp(20px, 2vw, 65px);
+    }
+}
+
+ul{
+    padding: 55px 0;
+    list-style: none;
+
+    li{
+        margin-bottom: 45px;
+
+        span{
+            font-weight: 600;
+        }
+    }
+}
+
+.potential{
+    margin-bottom: 90px;
+}
+
+@media only screen and (max-width: 2000px) {
+    
+    .conteiner{
+        width: 90%;
+    }
+
+    .block, .text, ul{
+        padding: 25px 0;
+    }
+
+    ul li{
+        margin-bottom: 25px;
+    }
+}

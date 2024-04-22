@@ -1,0 +1,50 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(12px, 1vw, 35px);
+
+}
+
+.list{
+    background-color: #F5F5F5;
+}
+
+.conteiner{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.block{
+    padding: 55px 0;
+}
+
+h3{
+    font-size: clamp(18px, 2vw, 60px);
+    margin-bottom: 30px;
+}
+
+ul{
+    list-style: none;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+
+    p{
+        margin-bottom: 40px;
+    }
+
+    ul{
+        list-style: disc;
+        margin-left: 50px;
+    }
+}
+
+li{
+    margin-bottom: 50px;
+}
+
+.potential{
+    margin-bottom: 90px;
+}

@@ -1,0 +1,59 @@
+:host{
+    background-color: #EFEFEF;
+    display: block;
+    padding: 40px 47px 0 47px;
+    font-size: clamp(12px, 1vw, 35px);
+}
+
+h1{
+    font-size: clamp(25px, 2vw , 50px);
+    margin-bottom: 35px;
+}
+
+p{
+    margin-left: 48px;
+}
+
+.but{
+    position: relative;
+    top: 30px;
+    padding: 15px;
+    background-color: #000;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 2000px) {
+    :host{
+        padding: 20px 47px 0 20px;
+    }
+
+    p{
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 2500px) {
+    
+    .but{
+        max-width: 255px;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    
+    .but{
+        max-width: 190px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        margin-bottom: 15px;
+    }
+    p{
+        margin: 10px;
+    }
+}

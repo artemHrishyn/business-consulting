@@ -1,0 +1,42 @@
+:host{
+    font-size: clamp(16px , 1vw, 55px);
+    line-height: 1.5;
+}
+
+.conteiner{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.block{
+    padding: 55px 0;
+}
+
+.list{
+    background-color: #F5F5F5;
+}
+
+.potential{
+    margin-bottom: 90px;
+}
+
+h3{
+    font-size: clamp(18px , 2vw, 60px);
+    margin-bottom: 30px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style: none;
+
+    li{
+        margin-bottom: 40px;
+
+        span{
+            font-weight: 600;
+        }
+    }
+}
