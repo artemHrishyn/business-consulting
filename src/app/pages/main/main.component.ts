@@ -14,6 +14,8 @@ import { RequestFormComponent } from '../../components/request-form/request-form
   templateUrl: './main.component.html',
   styleUrls: [
     './main.component.scss',
+    './up.scss',
+    './service.scss',
     './media.scss'
   ]
 })

@@ -1,0 +1,117 @@
+@import '_mixin.scss';
+
+$colorWhite: #fff;
+$colorBlack: #000;
+$font-family-Roboto: 'Roboto', sans-serif;
+
+.service{
+    padding: 40px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    color: $colorWhite;
+
+    &>div{
+        max-width: 1470px;
+        width: 100%;
+        margin: 70px auto 25px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    
+    h2{
+        margin: 0 0 55px;
+        font-size: clamp(30px, 3vw, 54px);
+        line-height: 1;
+        letter-spacing: 3px;
+    }
+
+    &__info{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        margin-bottom: 50px;
+        
+        &__title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px;
+            max-width: 430px;
+            width: 100%;
+            background-color:  $colorWhite;
+
+            div{
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 49px;
+                height: 49px;
+                background-color: $colorBlack;
+                
+                img{
+                    max-width: 26px;
+                    height: auto;
+                }
+            }
+
+            p{
+                font-size: 29px;
+                color: $colorBlack;
+            }
+        }
+
+        &__text{
+            font-size: 18px;
+            line-height: 1.6;
+            margin-left: 64px;
+            color: $colorWhite;
+            font-family: $font-family-Roboto;   
+        }
+    }
+
+    &__list{
+        display: grid;
+        @include gridTemplateServiceList();
+
+        li{
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            background-color: $colorWhite;
+            cursor: pointer;
+
+            div{
+                margin-right: 16px;
+                display: flex;
+                justify-content: center;
+                background-color: $colorBlack;
+                max-width: 47px;
+                width: 100%;
+                height: 47px;
+
+                img{
+                    max-width: 26px;
+                }
+            }
+
+            p{
+                font-size: 21px;
+                color: $colorBlack;
+            }
+        }
+    }
+}
