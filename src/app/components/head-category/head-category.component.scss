@@ -32,6 +32,7 @@ $colorBlack: #000;
         backdrop-filter: blur(15px);
         letter-spacing: 2px;
         padding: 18px 0;
+        animation: moveUp .5s ease-in-out 1 forwards;
     }
 
     h3{
@@ -46,6 +47,7 @@ $colorBlack: #000;
         -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
         padding: 12px 0;
+        animation: moveUp .5s ease-in-out 1 forwards;
 
         &__text{
             display: flex;
@@ -98,4 +100,13 @@ span{
     margin: 0 auto;
     max-width: 1470px;
     width: 100%;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }

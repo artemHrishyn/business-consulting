@@ -12,6 +12,14 @@
     padding: 55px 0;
 }
 
+.right{
+    animation: moveRight 1s ease-in-out 1 forwards;
+}
+
+.left{
+    animation: moveLeft 1s ease-in-out 1 forwards;
+}
+
 .list{
     background-color: #F5F5F5;
 }
@@ -41,5 +49,23 @@ ul{
         span{
             font-weight: 600;
         }
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(30%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }

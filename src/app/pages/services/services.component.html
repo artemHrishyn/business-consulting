@@ -1,6 +1,6 @@
 <bcs-head-category [category]="'Наші послуги'" ></bcs-head-category>
 
-<ul *ngIf="!childComponentActive">
+<ul>
     <li>
         <a [routerLink]="'registration'" routerLinkActive="active">
             <bcs-services-country img="__registr" text="Реєстрація компанії"></bcs-services-country>
@@ -42,6 +42,3 @@
         </a>
     </li>
 </ul>
-
-
-<router-outlet (activate)="onChildActivate()" (deactivate)="onChildDeactivate()"></router-outlet>

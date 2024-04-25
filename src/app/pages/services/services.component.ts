@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeadCategoryComponent } from '../../components/head-category/head-category.component';
-import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ServicesCountryComponent } from '../../components/services-country/services-country.component';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
     RouterModule,
     HeadCategoryComponent,
     ServicesCountryComponent
@@ -21,30 +20,4 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class ServicesComponent {
-  public childComponentActive: boolean = false;
-  public childrenValue: string = '';
-
-  constructor(
-    private router: Router
-  ) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        setTimeout(() => {
-          this.childComponentActive = false;
-        });
-      }
-    });
-  }
-  
-  public onChildActivate() {
-    setTimeout(() => {
-      this.childComponentActive = true;
-    });
-  }
-  
-  public onChildDeactivate() {
-    setTimeout(() => {
-      this.childComponentActive = false;
-    });
-  }
 }

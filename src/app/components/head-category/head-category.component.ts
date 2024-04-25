@@ -19,7 +19,7 @@ export class HeadCategoryComponent implements OnInit, AfterContentChecked {
 
   constructor(
     private goUrl: GoUrlService,
-    public setValue: SetValueService
+    private setValue: SetValueService
   ){}
   
   ngOnInit(): void {

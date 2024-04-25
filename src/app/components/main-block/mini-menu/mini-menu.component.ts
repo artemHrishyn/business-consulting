@@ -17,12 +17,14 @@ export class MiniMenuComponent {
   @Output() closeEvent = new EventEmitter<boolean>();
   public isMenuOpen: boolean = false;
 
-  constructor(public setValue: SetValueService){}
+  constructor(
+    public setValue: SetValueService
+  ){}
 
   public close(){
     this.closeEvent.emit(false);
   }
-
+  
   public goToService(value: string){
     this.setValue.setValue(value);
   }

@@ -1,11 +1,27 @@
-<img src="../../../../assets/icon/logo.svg" alt="Logo">
+<img src="../../../../assets/icon/logo.svg" alt="Logo" (click)="GoUrls()">
 
 <div>
     <ul>
-        <li>Головна</li>
-        <li>Наші послуги</li>
-        <li>Про компанію</li>
-        <li>Контакти</li>
+        <li>
+            <a [routerLink]="'main'" routerLinkActive="active">
+                Головна
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="'services'" routerLinkActive="active">
+                Наші послуги
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="'about-company'" routerLinkActive="active">
+                Про компанію
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="'contacts'" routerLinkActive="active">
+                Контакти
+            </a>
+        </li>
     </ul>
     <p>&copy; 2024, ALPINEGATE Business Consulting AG. Всі права захищені.</p>
 </div>

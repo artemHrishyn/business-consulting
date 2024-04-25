@@ -10,6 +10,8 @@
 
 img{
     max-width: clamp(224px, 3vw, 240px);
+    cursor: pointer;
+    animation: moveUp 1s ease-in-out 1 forwards;
 }
 
 div{
@@ -26,6 +28,7 @@ ul{
     justify-content: space-between;
     list-style: none;
     color:#8F8F8F;
+    animation: moveUp 1s ease-in-out 1 forwards;
     
     li{
         padding: 0 25px 25px 25px;
@@ -38,9 +41,29 @@ ul{
             color: #fff;
             border-bottom: 2px solid #fff;
         }
+
+        a{
+            color: #8F8F8F;
+            text-decoration: none;
+
+            &:hover{
+                color: #fff;
+            }
+        }
     }
 }
 
 p{
     font-size: clamp(26px, 3vw, 27px);
+    animation: moveUp 1s ease-in-out 1 forwards;
+}
+
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }

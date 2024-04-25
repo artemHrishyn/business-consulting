@@ -16,18 +16,15 @@ import { BankAccountComponent } from './services/bank-account/bank-account.compo
 export const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: "main", component: MainComponent },
-  
-  { path: 'services', component: ServicesComponent, pathMatch: 'full' },
-  { path: "services", component: ServicesComponent, children:[
-    { path: "registration", component: RegistrationComponent },
-    { path: "accounting", component: AccountingComponent },
-    { path: "audit", component: AuditComponent },
-    { path: "corporate-admin", component: CorporateAdministrationComponent },
-    { path: "tax", component: TaxComponent },
-    { path: "trademark-registration", component: TrademarkRegistrationComponent },
-    { path: "fiduciary-services", component:FiduciaryServicesComponent },
-    { path: "bank-account", component: BankAccountComponent },
-  ]},
+  { path: "services", component: ServicesComponent },
+  { path: "services/registration", component: RegistrationComponent },
+  { path: "services/accounting", component: AccountingComponent },
+  { path: "services/audit", component: AuditComponent },
+  { path: "services/corporate-admin", component: CorporateAdministrationComponent },
+  { path: "services/tax", component: TaxComponent },
+  { path: "services/trademark-registration", component: TrademarkRegistrationComponent },
+  { path: "services/fiduciary-services", component:FiduciaryServicesComponent },
+  { path: "services/bank-account", component: BankAccountComponent },
   
   { path: "about-company", component: AboutCompanyComponent },
   { path: "contacts", component: ContactsComponent },

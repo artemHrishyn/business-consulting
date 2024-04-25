@@ -3,3 +3,20 @@ ul{
     margin: 100px;
     list-style: none;
 }
+
+a{
+    margin: 0;
+    font-family: 'Coolvetica C', sans-serif;
+    font-weight: normal;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    background-color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}

@@ -5,7 +5,9 @@
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     z-index: 1000;
+    animation: moveDown 1s ease-in-out 1 forwards;
 }
+
 .container{
     display: flex;
     justify-content: space-between;
@@ -16,6 +18,7 @@
 }
 img{
     max-width: clamp(128px, 6vw ,192px);
+    cursor: pointer;
 }
 
 ul{
@@ -55,4 +58,13 @@ ul{
     
     &:hover{
         background-color: rgba(0, 0, 0, 0.45);}
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-30%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }

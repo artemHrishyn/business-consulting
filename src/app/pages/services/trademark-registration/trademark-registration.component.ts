@@ -7,7 +7,8 @@ import { SetValueService } from '../../../services/setValue/set-value.service';
   selector: 'bcs-trademark-registration',
   standalone: true,
   imports: [
-    BusinessPotentialComponent
+    BusinessPotentialComponent,
+    HeadCategoryComponent
   ],
   templateUrl: './trademark-registration.component.html',
   styleUrl: './trademark-registration.component.scss'

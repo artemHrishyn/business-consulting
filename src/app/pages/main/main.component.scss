@@ -26,13 +26,17 @@ $font-family-Roboto: 'Roboto', sans-serif;
             @include gridTemplateHead();
             margin-bottom: 30px;
 
+            h1{
+                animation: moverighte 1s ease-in-out 1 forwards;
+            }
+
             &__info{
                 margin-left: 15px;
                 font-family: $font-family-Teko;
                 font-weight: 500;
                 letter-spacing: 4px;
                 font-size: clamp(10px, 2vw, 25px);
-
+                animation: moveleft 1s ease-in-out 1 forwards;
             }
         }
 
@@ -103,6 +107,14 @@ $font-family-Roboto: 'Roboto', sans-serif;
 .info{
     @include gridTemplateInfo();
     padding: 80px 200px;
+
+    &__img1, &__part2{
+        animation: moverighte 1s ease-in-out 1 forwards;
+    }
+
+    &__img2, &__text{
+        animation: moveleft 1s ease-in-out 1 forwards;
+    }
 
     h2{
         font-family: $font-family-Teko;
@@ -256,6 +268,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
         max-width: 531px;
         width: 100%;
         height: auto;
+        animation: moverighte 1s ease-in-out 1 forwards;
 
         h3{
             font-size: clamp(20px, 3vw, 40px);
@@ -275,7 +288,9 @@ $font-family-Roboto: 'Roboto', sans-serif;
         font-size: 50px;
         letter-spacing: 3px;
         line-height: 1;
+        animation: moveleft 1s ease-in-out 1 forwards;
     }
+
 }
 
 .announcement{
@@ -330,6 +345,7 @@ $font-family-Roboto: 'Roboto', sans-serif;
         right: 10%;
         bottom: 10%;
         background-color: $colorWhite;
+        animation: moveleft 1s ease-in-out 1 forwards;
 
         h2{
             margin-bottom: 100px;
@@ -380,5 +396,24 @@ $font-family-Roboto: 'Roboto', sans-serif;
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+
+@keyframes moverighte {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveleft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }

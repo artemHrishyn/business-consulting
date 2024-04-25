@@ -7,7 +7,8 @@ import { SetValueService } from '../../../services/setValue/set-value.service';
   selector: 'bcs-tax',
   standalone: true,
   imports: [
-    BusinessPotentialComponent
+    BusinessPotentialComponent,
+    HeadCategoryComponent
   ],
   templateUrl: './tax.component.html',
   styleUrl: './tax.component.scss'

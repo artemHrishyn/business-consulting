@@ -7,7 +7,8 @@ import { SetValueService } from '../../../services/setValue/set-value.service';
   selector: 'bcs-corporate-administration',
   standalone: true,
   imports: [
-    BusinessPotentialComponent
+    BusinessPotentialComponent,
+    HeadCategoryComponent
   ],
   templateUrl: './corporate-administration.component.html',
   styleUrl: './corporate-administration.component.scss'
